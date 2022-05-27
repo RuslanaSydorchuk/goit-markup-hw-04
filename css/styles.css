@@ -32,6 +32,7 @@ body {
 .header{
     box-sizing: border-box;
     border: 1px solid #ECECEC;
+    align-items: baseline;
 }
 
 .main-nav{
@@ -101,8 +102,12 @@ body {
     margin-left: 50px;
 }
 
+.contact-information{
+    display: inline;
+
+}
 .contact-nav .link{
-    display: block;
+    /*display: block;*/
     padding-top: 32px;
     padding-bottom: 32px;
         
@@ -122,16 +127,41 @@ body {
     line-height: 1.14;
 }
 
+.thum-contants {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 10px;
 
+    /*display: block;*/
+    width: 16px;
+    height: 12px;
+}
 
+.icon-contact {
+    padding: 0;
+    margin: 0;
+}
+.icon-contact:hover,
+.icon-contact:focus{
+    color: var(--accent-color);
+}
 /*hero*/
 
 .hero {
+    max-width: 1600px;
     background-color: #2F303A;
+    background-image: linear-gradient(
+        to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
 }
+
 .hero-title{
     color: var(--minor-color);
     font-weight: 900;
@@ -299,13 +329,35 @@ body {
     letter-spacing: 0.03em;
     text-align: center;
 }
+.member-social-links{
+    display: flex;
+    object-position: center;
+    justify-content: space-around;
+    margin: 0 32px 30px 32px;
+
+}
+
+.member-social-links .item {
+    display: inline;
+    margin-right: 10px;
+}
+
+.thumb-memmber-social-links{
+    width: 44px;
+    height: 44px;
+}
+
+.icon-member-social-link{
+    padding: 0;
+    margin: 12px;
+}
 
 /*our-clients*/
 
 .thumb-client{
-    margin-top: 0;
-    margin-bottom: 0;
     margin-right: 30px;
+    margin-left: ;
+    padding: 0;
 
     display: inline-block;
     width: 170px;
