@@ -103,14 +103,12 @@ body {
 }
 
 .contact-information{
-    display: inline;
+    display: flex;
 
 }
 .contact-nav .link{
-    /*display: block;*/
-    padding-top: 32px;
-    padding-bottom: 32px;
-        
+    margin-left: 10px;
+            
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -127,12 +125,10 @@ body {
     line-height: 1.14;
 }
 
-.thum-contants {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    margin-left: 10px;
+.thum-contants{
+    /*margin-right: 10px;*/
 
-    /*display: block;*/
+    display: inline;
     width: 16px;
     height: 12px;
 }
@@ -141,10 +137,7 @@ body {
     padding: 0;
     margin: 0;
 }
-.icon-contact:hover,
-.icon-contact:focus{
-    color: var(--accent-color);
-}
+
 /*hero*/
 
 .hero {
@@ -289,7 +282,7 @@ body {
 
 .member{
     box-sizing: border-box;
-    width: 270;
+    max-width: 270px;
     background-color: var(--primary-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -354,13 +347,17 @@ body {
 
 /*our-clients*/
 
+.client-list{
+    display: flex;
+}
+
 .thumb-client{
     margin-right: 30px;
-    margin-left: ;
+    margin-left: 0;
     padding: 0;
 
     display: inline-block;
-    width: 170px;
+    width: calc((100% - 150px)/6);
     height: 92px;
     box-sizing: border-box;
     border: 1px solid #2196F3;
@@ -374,17 +371,20 @@ body {
 .icon-client{
     margin: 16px 32px;
     padding: 0;
+
 }
 
 /*footer*/
 
-.footer{
+footer{
     background-color:#2F303A;
     padding: 60px 15px 20px 15px;
     margin-left: auto;
     margin-right: auto;
 
+    display: flex;
 }
+
 
 .footer-logo{
     color: var(--minor-color);
@@ -424,6 +424,15 @@ address {
     color: var(--accent-color);
 }
 
+b{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+        color: #FFFFFF;
+}
 
 /*portfolio*/
 
@@ -457,6 +466,7 @@ address {
 .filter-button:focus{
     color: var(--minor-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*products*/
@@ -480,6 +490,10 @@ address {
 
 .product-item:nth-last-child(-n+3){
     margin-bottom:0;
+}
+
+.product-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .product-information{
