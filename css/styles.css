@@ -5,6 +5,7 @@
     --accent-color: #2196F3;
     --primary-background-color: #FFFFFF;
     --secondary-background-color: #2F303A;
+    --icons-color: #AFB1B8;
 }
 
 body {
@@ -104,38 +105,38 @@ body {
 
 .contact-information{
     display: flex;
-
+    cursor: pointer;
 }
-.contact-nav .link{
+
+.contact-link{
     margin-left: 10px;
             
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
 
-.contact-nav .link:hover,
-.contact-nav .link:focus{
-    color: var(--accent-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-}
 
-.thum-contants{
-    /*margin-right: 10px;*/
-
+/*.thum-contants{
+    
     display: inline;
     width: 16px;
     height: 12px;
+}*/
+
+
+.contact-link:hover,
+.contact-link:focus{
+    color: var(--accent-color);
 }
 
-.icon-contact {
+.icon-contact{
     padding: 0;
-    margin: 0;
+    margin: 0 10px 0 0;
+    fill: currentColor;
 }
 
 /*hero*/
@@ -327,7 +328,6 @@ body {
     object-position: center;
     justify-content: space-around;
     margin: 0 32px 30px 32px;
-
 }
 
 .member-social-links .item {
@@ -338,6 +338,15 @@ body {
 .thumb-memmber-social-links{
     width: 44px;
     height: 44px;
+    fill: var(--icons-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.thumb-memmber-social-links:hover,
+.thumb-memmber-social-links:focus{
+    fill: var(--primary-background-color);
+    background: var(--accent-color);
 }
 
 .icon-member-social-link{
@@ -360,8 +369,10 @@ body {
     width: calc((100% - 150px)/6);
     height: 92px;
     box-sizing: border-box;
-    border: 1px solid #2196F3;
+    border: 1px solid #AFB1B8;
     border-radius: 4px;
+    fill: var(--icons-color);
+    cursor: pointer;
 }
 
 .thumb-client:last-child{
@@ -371,33 +382,54 @@ body {
 .icon-client{
     margin: 16px 32px;
     padding: 0;
+    
+}
 
+.thumb-client:hover,
+.thumb-client:focus{
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 /*footer*/
 
 footer{
     background-color:#2F303A;
-    padding: 60px 15px 20px 15px;
+    padding: 60px 15px;
     margin-left: auto;
     margin-right: auto;
 
     display: flex;
+
 }
 
+.footer-information {
+    display: flex;
+    padding: 0;
+    align-items: baseline;
+}
 
 .footer-logo{
     color: var(--minor-color);
 }
 
+.footer-logo p{
+    
+}
+
 address {
+    padding: 0;
     font-style: normal;
     margin-top: 20px;
     width: 231px;
+    display: block;
+    margin-right: 70px;
 }
 
-.contact-list .address{
+
+.address{
     margin-bottom: 9px;
+    padding: 0;
 
     color: var(--minor-color);
     font-weight: 400;
@@ -408,11 +440,13 @@ address {
 }
 
 .contact-list .link {
+    padding: 0;
     color:#FFFFFF60;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .contact-list .link:first-child{
@@ -425,13 +459,41 @@ address {
 }
 
 b{
+    padding: 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     
-        color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.company-social-links{
+    display: flex;
+    margin-top: 20px;
+}
+
+.thumb-company-social-links{
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    fill: var(--primary-background-color)
+}
+
+.thumb-company-social-links:last-child{
+    margin-right:0;
+}
+
+.thumb-company-social-links:hover,
+.thumb-company-social-links:focus{
+    background-color: var(--accent-color);
+}
+
+.icon-company-social-link{
+    margin: 12px;
 }
 
 /*portfolio*/
@@ -482,6 +544,7 @@ b{
     margin-bottom: 30px;
     box-sizing: border-box;
     border: 1px solid #EEEEEE;
+    cursor: pointer;
 }
 
 .product-item:nth-child(3n){
