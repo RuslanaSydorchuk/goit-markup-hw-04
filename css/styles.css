@@ -111,22 +111,16 @@ body {
 .contact-link{
     margin-left: 10px;
             
+    height: 16px;
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    display: flex;
 }
-
-
-/*.thum-contants{
-    
-    display: inline;
-    width: 16px;
-    height: 12px;
-}*/
-
 
 .contact-link:hover,
 .contact-link:focus{
@@ -152,8 +146,11 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
     text-align: center;
+
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .hero-title{
@@ -186,8 +183,7 @@ body {
 }
 .hero-button:hover,
 .hero-button:focus{
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 1px solid #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /*main*/
@@ -218,16 +214,11 @@ body {
 .thumb-feature{
     margin-top: 0;
     margin-bottom: 30px;
-
     background-color: #F5F4FA;
-    display: block;
-    width: 270px;
     height: 120px;
-}
-
-.icon-feature{
-    padding: 0;
-    margin: 25px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .feature .item{
@@ -281,6 +272,9 @@ body {
     display: flex;
 }
 
+.item{
+    padding: 0;
+}
 .member{
     box-sizing: border-box;
     max-width: 270px;
@@ -316,42 +310,49 @@ body {
 
 .team-member-position{
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom:16px;
 
     font-size: 16px;
     line-height:  1.2;
     letter-spacing: 0.03em;
     text-align: center;
 }
+
+
 .member-social-links{
     display: flex;
-    object-position: center;
     justify-content: space-around;
-    margin: 0 32px 30px 32px;
+    margin: 0 32px;
 }
 
-.member-social-links .item {
+.member-social-links .item{
     display: inline;
     margin-right: 10px;
 }
 
-.thumb-memmber-social-links{
+
+.member-social-link{
     width: 44px;
     height: 44px;
-    fill: var(--icons-color);
+    padding: 12px;
     border-radius: 50%;
-    cursor: pointer;
+    display: block;
+    color: var(--icons-color);
 }
 
-.thumb-memmber-social-links:hover,
-.thumb-memmber-social-links:focus{
-    fill: var(--primary-background-color);
+.icon-member-social-link {
+    fill: currentColor
+}
+
+.member-social-link:hover,
+.member-social-link:focus{
     background: var(--accent-color);
+    color: #FFFFFF;
 }
 
-.icon-member-social-link{
-    padding: 0;
-    margin: 12px;
+.icon-member-social-link:hover,
+.icon-member-social-link:focus{
+    fill: var(--primary-background-color);
 }
 
 /*our-clients*/
@@ -365,28 +366,32 @@ body {
     margin-left: 0;
     padding: 0;
 
-    display: inline-block;
     width: calc((100% - 150px)/6);
     height: 92px;
+}
+
+.thumb-client:last-child {
+    margin-right: 0;
+}
+
+.client-link{
+    padding: 16px 32px;
+
+    display: inline-block;
     box-sizing: border-box;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: var(--icons-color);
-    cursor: pointer;
-}
-
-.thumb-client:last-child{
-    margin-right: 0;
 }
 
 .icon-client{
-    margin: 16px 32px;
+    margin: 0;
     padding: 0;
     
 }
 
-.thumb-client:hover,
-.thumb-client:focus{
+.client-link:hover,
+.client-link:focus{
     fill: var(--accent-color);
     border: 1px solid var(--accent-color);
 }
@@ -537,14 +542,17 @@ b{
     display: flex;
     flex-wrap: wrap;
 }
-
+.product-link{
+    text-decoration: none;
+}
 .product-item{
     width: calc((100% - 60px)/3);
     margin-right: 30px;
     margin-bottom: 30px;
     box-sizing: border-box;
-    border: 1px solid #EEEEEE;
-    cursor: pointer;
+    
+    
+    /*cursor: pointer;*/
 }
 
 .product-item:nth-child(3n){
@@ -560,23 +568,31 @@ b{
 }
 
 .product-information{
+
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+    border-left: 1px solid #EEEEEE;
+    border-bottom:1px solid #EEEEEE;
+    border-right:1px solid #EEEEEE;
 }
 
 .product-name{
     color: var(--title-text-color);
     font-size: 18px;
     line-height: 2;
+
     margin-top: 0;
     margin-bottom: 4px;
+
 }
 
 .product-type{
     font-size: 16px;
     line-height: 1.88;
+    color: var(--primary-text-color);
+
     margin-top: 0;
     margin-bottom: 0;
 }
