@@ -28,7 +28,10 @@ body {
     width: 1200px;
 }
 /*outline: 2px solid navy;*/
-
+img {
+    display: block;
+    max-width: 100%;
+}
 
 .header{
     box-sizing: border-box;
@@ -390,7 +393,7 @@ body {
 .icon-client{
     margin: 0;
     padding: 0;
-    
+    width: 100%;
 }
 
 .client-link:hover,
