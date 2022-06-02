@@ -254,15 +254,19 @@ img {
 
 /*products-services*/
 
-.products-services{
+.products-services-list{
     display: flex;
 }
 
-.products-services .item{
+.products-services{
+    display: block;
+}
+
+.products-services-list .item{
     width: calc((100%-60px)/3);
     margin-right: 30px;
 }
-.products-services .item:last-child{
+..products-services-list .item:last-child{
     margin-right: 0;
 }
 
@@ -394,6 +398,7 @@ img {
     margin: 0;
     padding: 0;
     width: 100%;
+    display: block;
 }
 
 .client-link:hover,
@@ -596,6 +601,7 @@ b{
     color: var(--title-text-color);
     font-size: 18px;
     line-height: 2;
+    letter-spacing: 0.06em;
 
     margin-top: 0;
     margin-bottom: 4px;
@@ -606,6 +612,7 @@ b{
     font-size: 16px;
     line-height: 1.88;
     color: var(--primary-text-color);
+    letter-spacing: 0.03em;
 
     margin-top: 0;
     margin-bottom: 0;
